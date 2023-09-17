@@ -12,34 +12,34 @@ body {
   display: flex;
   flex-direction: row-reverse;
   flex-wrap: wrap-reverse;
-  gap: 1em;
-  width: 85%;
+  gap: 1.2em;
+  width: 97%;
   margin: 0 auto;
 }
 
 .slider_wrap {
   width: 100%;
+  margin-top: 1.5em;
+  border-radius: 1.2em;
   overflow: hidden;
 }
 
 .inputs {
   display: flex;
-  width: 25%;
+  justify-content: right;
+  width: 17%;
 }
 
 .slider {
   display: flex;
+  align-items: center;
   width: 400%;
   height: 100%;
-  position: relative;
-  left: 0;
   transition: 1.2s;
 }
 
 .content_wrap {
-  width: 70%;
-  height: 80%;
-  border-radius: 1em;
+  width: 80%;
   overflow: hidden;
 }
 
@@ -48,15 +48,14 @@ body {
   align-items: center;
   height: 100%;
   width: 400%;
-  position: relative;
-  left: 0;
   transition: 1.2s;
 }
 
 .content p {
   width: 100%;
   display: flex;
-  padding-left: 1em;
+  color: rgb(251, 251, 252);
+  font-size: 1.2em;
 }
 
 .slider div {
@@ -97,19 +96,19 @@ input:checked+label:hover>.mark {
 }
 
 .first {
-  background: center/45% url(../src/img/first.jpg) no-repeat;
+  background: center/100% url(../src/img/first.jpg) no-repeat;
 }
 
 .second {
-  background: center/50% url(../src/img/second.jpg) no-repeat;
+  background: center/100% url(../src/img/second.jpg) no-repeat;
 }
 
 .third {
-  background: center/60% url(../src/img/third.png) no-repeat;
+  background: center/100% url(../src/img/third.jpg) no-repeat;
 }
 
 .fourth {
-  background: center/50% url(../src/img/fourth.png) no-repeat;
+  background: center/100% url(../src/img/fourth.jpg) no-repeat;
 }
 
 .inputs:has(#first:checked)~.slider_wrap>.slider,
@@ -130,4 +129,30 @@ input:checked+label:hover>.mark {
 .inputs:has(#fourth:checked)~.slider_wrap>.slider,
 .inputs:has(#fourth:checked)~.content_wrap>.content {
   transform: translateX(-75%);
+}
+
+@media (max-width:800px) {
+  .slider_wrap {
+    height: 70vw;
+  }
+}
+
+@media (max-width:670px) {
+  .slider_wrap {
+    height: 60vw;
+  }
+
+  .content_wrap,
+  .inputs {
+    width: 100%;
+  }
+
+  .slider_wrap {
+    order: 2;
+  }
+
+  .inputs {
+    order: 1;
+    justify-content: center;
+  }
 }
