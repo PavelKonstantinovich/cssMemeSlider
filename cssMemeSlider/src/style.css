@@ -131,6 +131,12 @@ input:checked+label:hover>.mark {
   transform: translateX(-75%);
 }
 
+@media (min-width:1300px) {
+  .container {
+    width: 60%;
+  }
+}
+
 @media (max-width:800px) {
   .slider_wrap {
     height: 70vw;
@@ -154,5 +160,9 @@ input:checked+label:hover>.mark {
   .inputs {
     order: 1;
     justify-content: center;
+  }
+
+  .content p {
+    font-size: 0.8em;
   }
 }
