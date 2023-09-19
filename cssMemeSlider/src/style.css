@@ -91,6 +91,10 @@ label:hover>.mark {
   background-color: rgb(251, 251, 252);
 }
 
+label:active>.mark {
+  background-color: rgb(139, 139, 173);
+}
+
 input:checked+label:hover>.mark {
   border: 0.2em solid rgb(251, 251, 252);
 }
